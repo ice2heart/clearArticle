@@ -1,0 +1,21 @@
+{
+   "bash.im":{
+      "type":"xpath",
+      "param":"//div[@class=\"text\"]",
+      "title_type":"xpath",
+      "title_param":"//*[@class=\"b-topic__title\"]/h1"
+   },
+   "lenta.ru":{
+      "type":"xpath",
+      "param":"//div[@class=\"b-text clearfix\"]/p",
+      "title_type":"xpath",
+      "title_param":"//h1[@class=\"b-topic__title\"]"
+   },
+   "e1.ru":{
+      "type":"xpath",
+      "param":"//*[@id=\"newscontent\"]/p",
+      "title_type":"xpath",
+      "title_param":"//h1[@class=\"big\"]"
+   }
+   
+}
