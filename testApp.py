@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import unittest
@@ -26,8 +26,8 @@ class IntegrationTestCase(unittest.TestCase):
             r = f.format()
             result = re.sub(r'\s+', ' ', r['text'])
             #result = f.format()
-            print r['title']
-            print result
+            print(r['title'])
+            print(result)
             self.assertTrue(len(result) > 0)
 
 
@@ -56,7 +56,7 @@ class UnknownSiteTestCate(unittest.TestCase):
             p = app.Parser(u.get(), s.scheme())
             f = app.Formater(p.parse())
             r = f.format()
-            print r['title']
+            print(r['title'])
             result = r['text']
             #print result
             self.assertTrue(len(result) > 0)

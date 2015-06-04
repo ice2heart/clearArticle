@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # need cssselect, lxml, requests
 
@@ -8,7 +8,7 @@ import requests
 import lxml.html as html
 from lxml.html.clean import clean_html
 import argparse
-from urlparse import urlparse
+from urllib.parse import urlparse
 import os
 import codecs
 import json
@@ -58,7 +58,8 @@ class Uploader():
     def get(self):
         try:
             request = requests.get(self.url)
-        except Exception, error:
+            request.connection.close()
+        except Exception as  error:
             perror(str(error))
             return ''
         if request.url == 'http://bash.im/':
